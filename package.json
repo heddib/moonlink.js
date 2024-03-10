@@ -1,6 +1,6 @@
 {
   "name": "moonlink.js",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "description": "Imagine a Music... 🌙✨ Welcome to Moonlink.js! We invite you to create your own music bot on Discord using Lavalink, in a simple and easy way! 🎶🤖",
   "keywords": [
     "bot",
@@ -22,17 +22,14 @@
     }
   },
   "scripts": {
-    "start": "rm -r dist && tsc && mv ./dist/index.js ./"
+    "start": "shx rm -r dist && tsc"
   },
   "homepage": "https://moonlink.js.org",
   "bugs": {
     "url": "https://github.com/Ecliptia/moonlink.js/issues",
     "email": "1Lucas1apk@gmail.com"
   },
-  "license": {
-    "type": "Apache-2.0",
-    "url": "https://opensource.org/licenses/apache2.0.php"
-  },
+  "license": "Apache-2.0",
   "contributors": [
     "1Lucas1.apk"
   ],
@@ -45,9 +42,11 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "cross-env": "^7.0.3",
     "discord.js": "^14.14.1",
     "get-image-colors": "^4.0.1",
     "mongoose": "^8.1.1",
+    "shx": "^0.3.4",
     "typecript": "^0.0.1-security",
     "typedoc": "^0.25.4",
     "typedoc-plugin-markdown": "^3.17.1"

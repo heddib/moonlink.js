@@ -183,7 +183,6 @@ class MoonlinkPlayer {
                 return;
             }
         }
-        this.current = data;
         await this.node.rest.update({
             guildId: this.guildId,
             data: {

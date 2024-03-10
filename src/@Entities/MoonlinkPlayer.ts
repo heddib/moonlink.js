@@ -284,7 +284,7 @@ export class MoonlinkPlayer {
             }
         }
 
-        this.current = data;
+        // this.current = data;
 
         await this.node.rest.update({
             guildId: this.guildId,
