@@ -8,7 +8,9 @@ export declare class MoonlinkQueue {
     has(identifier: string): boolean;
     first(): any;
     shift(): any;
+    unshift(data: any): void;
     push(data: any): void;
+    pop(): any;
     clear(): boolean;
     get size(): number;
     shuffle(): boolean;

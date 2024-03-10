@@ -46,10 +46,23 @@ class MoonlinkQueue {
         this.setQueue(queue);
         return track;
     }
+    unshift(data) {
+        let queue = this.getQueue();
+        queue.unshift(data);
+        this.setQueue(queue);
+    }
     push(data) {
         let queue = this.getQueue();
         queue.push(data);
         this.setQueue(queue);
+    }
+    pop() {
+        let queue = this.getQueue();
+        if (!queue.length)
+            return null;
+        let track = queue.pop();
+        this.setQueue(queue);
+        return track;
     }
     clear() {
         const queue = this.getQueue();

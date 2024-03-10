@@ -60,10 +60,25 @@ export class MoonlinkQueue {
         return track;
     }
 
+    public unshift(data: any): void {
+        let queue = this.getQueue();
+        queue.unshift(data);
+        this.setQueue(queue);
+    }
+
     public push(data: any): void {
         let queue = this.getQueue();
         queue.push(data);
         this.setQueue(queue);
+    }
+
+    public pop(): any {
+        let queue = this.getQueue();
+        if (!queue.length) return null;
+        let track = queue.pop();
+        this.setQueue(queue);
+
+        return track;
     }
 
     public clear(): boolean {
