@@ -192,6 +192,7 @@ class MoonlinkPlayer {
                 volume: this.volume
             }
         });
+        this.current = data;
         if (this.manager.options.resume)
             this.manager.players.backup(this);
         return true;

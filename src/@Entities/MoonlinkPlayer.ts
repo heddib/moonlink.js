@@ -284,8 +284,6 @@ export class MoonlinkPlayer {
             }
         }
 
-        // this.current = data;
-
         await this.node.rest.update({
             guildId: this.guildId,
             data: {
@@ -295,6 +293,9 @@ export class MoonlinkPlayer {
                 volume: this.volume
             }
         });
+
+        this.current = data;
+
         if (this.manager.options.resume) this.manager.players.backup(this);
         return true;
     }
