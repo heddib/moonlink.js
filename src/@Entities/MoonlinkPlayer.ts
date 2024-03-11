@@ -240,7 +240,10 @@ export class MoonlinkPlayer {
                 guildId: this.guildId,
                 data: {
                     track: {
-                        encoded: this.current.encoded
+                        encoded: this.current.encoded,
+                        userData: {
+                            requester: this.current.requester
+                        }
                     },
                     position: this.current.position,
                     volume: this.volume
@@ -288,7 +291,10 @@ export class MoonlinkPlayer {
             guildId: this.guildId,
             data: {
                 track: {
-                    encoded: data.encoded
+                    encoded: data.encoded,
+                    userData: {
+                        requester: data.requester
+                    }
                 },
                 volume: this.volume
             }
