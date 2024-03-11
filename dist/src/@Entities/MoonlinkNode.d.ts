@@ -29,6 +29,7 @@ export declare class MoonlinkNode {
     stats: INodeStats | Record<string, any>;
     calls: number;
     constructor(node: INode);
+    get isDisconnected(): boolean;
     get address(): string;
     check(node: INode): void;
     request(endpoint: string, params: any): Promise<object>;

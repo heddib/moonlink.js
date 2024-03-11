@@ -62,6 +62,10 @@ export class MoonlinkNode {
         this.connect();
     }
 
+    public get isDisconnected(): boolean {
+        return this.state === "DISCONNECTED";
+    }
+
     /**
      * Returns the formatted address string composed of the host and port.
      * @returns The formatted address string.

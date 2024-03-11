@@ -41,6 +41,9 @@ class MoonlinkNode {
         this.rest = new (index_1.Structure.get("MoonlinkRestFul"))(this);
         this.connect();
     }
+    get isDisconnected() {
+        return this.state === "DISCONNECTED";
+    }
     get address() {
         return `${this.host}:${this.port}`;
     }
